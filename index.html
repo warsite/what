@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="icon" type="image/x-icon" href="../swats.lol/isis/images/fbi.png">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link href="css/assets-cosmo.css" rel="stylesheet">
+    <script type="a88131ffbc7bb68ffd5eb270-text/javascript">
+        let msg1 = "swats.lol! >_< ";
+        const speed = 100;
+
+        function scrollTitle() {
+            document.title = msg1;
+            msg1 = msg1.substring(1, msg1.length) + msg1.charAt(0);
+            setTimeout(scrollTitle, speed);
+        }
+
+        scrollTitle();
+    </script>
+    <script disable-devtool-auto="" src="../cdn.jsdelivr.net/npm/disable-devtool%40latest" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+    <title> swats.lol </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="swats.lol" property="og:title">
+    <meta content="swats.lol is the #1 Private COM Network Organization" property="og:description">
+    <link href="css/assets-anim.css" rel="stylesheet">
+    <link href="css/assets-style.css" rel="stylesheet">
+    <link href="css/assets-cancel.css" rel="stylesheet">
+    <script src="js/2392-assets-routing.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="hanginggirl animated infinite nodrag" draggable="false" src="images/pula.gif">
+            </div>
+        </div>
+    </div>
+    
+<br>
+<br>
+<div id="enter-remove">
+    <b class="begin">
+        <span id="enter-type-in" style="text-shadow: 0 0 0.40em #fff;"></span>
+        <br>
+        <!-- YES and NO buttons -->
+        <span id="enter" class="appear">[<span style="--color: #FFFFFF" class="glow-hover">YES</span>]</span> 
+        <span class="appear" onclick="activateDox()">[<span style="--color: #FF0000" class="glow-hover">NO</span>]</span>
+    </b> 
+    <br>
+    <div id="dox" style="display:none;">
+        <video id="dox-bg-vid" loop="" playsinline="" preload="auto" src="assets/c8304c0b-cb38-4316-af3a-4322c4bac1ea.mp4"></video>
+        <div id="dox-overlay"></div>
+    </div>
+</div>
+
+<!-- Rest of the page content -->
+<div id="main">
+    <div style="text-align: center;">
+        <h3 style="text-shadow: 0 0 0.40em #FFFFFF;">
+            <a href="users/isis/index.html" style="background-image: url('../i.ibb.co/D8vWbSn/sparkle.gif');"><strong>isis</strong></a><br>
+        </h3>
+        <h3 style="text-shadow: 0 0 0.40em #FFFFFF;">
+            <a href="users/poisz/index.html" style="background-image: url('../i.ibb.co/D8vWbSn/sparkle.gif');"><strong>poisz</strong></a><br>
+        </h3>
+        <h3 style="text-shadow: 0 0 0.40em #FFFFFF;">
+            <a href="users/die/index.html" style="background-image: url('../i.ibb.co/D8vWbSn/sparkle.gif');"><strong>die</strong></a><br>
+        </h3>
+        <h3 style="text-shadow: 0 0 0.40em #FFFFFF;">
+            <a href="users/lostinitaly/index.html" style="background-image: url('../i.ibb.co/D8vWbSn/sparkle.gif');"><strong>qv1p</strong></a><br>
+        </h3>
+    </div>
+</div>
+<audio id="audio" src="assets/1.mp3"></audio>
+<script src="js/7114-assets-audio.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+<script src="js/6800-assets-main-audio-unlock.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+<link href="fonts.cdnfonts.com/css/terror-pro.css" rel="stylesheet">
+
+<!-- Prevent right-click -->
+<script type="a88131ffbc7bb68ffd5eb270-text/javascript">
+    document.addEventListener('contextmenu', event =>
+        event.preventDefault()
+    )
+</script>
+
+<script type="text/javascript">
+    // Function to activate DOX only when NO is clicked
+    function activateDox() {
+        console.log("NO clicked. Activating DOX.");
+        document.getElementById("dox").style.display = "block";  // Show DOX content
+        start_dox();  // Call the start_dox function
+    }
+
+    // BrowserDetector definition (keep as is)
+    !function (e, o) {
+        "object" == typeof exports && "undefined" != typeof module
+            ? module.exports = o()
+            : "function" == typeof define && define.amd
+                ? define(o)
+                : (e = "undefined" != typeof globalThis ? globalThis : e || self).BrowserDetector = o();
+    }(this, (function () {
+        "use strict";
+
+        return function BrowserDetector() {
+            this.userAgent = window.navigator.userAgent;
+            this.parseUserAgent = function () {
+                return { name: "Your Browser", platform: "Your OS", version: "X.X" };
+            };
+        };
+    }));
+
+    // Function to gather user data and display on page
+    async function start_dox() {
+        console.log("Starting DOX");
+
+        let dox = document.getElementById("dox");
+        let bg = document.getElementById("dox-bg-vid");
+        let overlay = document.getElementById("dox-overlay");
+        bg.play();
+        dox.style.opacity = "1";
+
+        let fontSize = Math.min(window.innerHeight / 10, window.innerWidth / 20);
+        overlay.style.fontSize = fontSize + "px";
+
+        // Fetch IP and details
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const basic = await ipResponse.json();
+        const detailedResponse = await fetch(`https://we-are-jammin.xyz/json/${basic.ip}`);
+        let detailed = await detailedResponse.json();
+
+        // Use BrowserDetector
+        const detector = new BrowserDetector();
+        const browserDetails = detector.parseUserAgent();
+
+        // Helper function to append data to overlay
+        async function push(key, value) {
+            let span = document.createElement("span");
+            span.innerText = `${key}: ${value}`;
+            overlay.appendChild(span);
+
+            const height = overlay.getBoundingClientRect().height;
+            if (height > window.innerHeight) {
+                fontSize = fontSize - (fontSize / 10);
+                overlay.style.fontSize = fontSize + 'px';
+            }
+
+            await new Promise(res => setTimeout(res, 300));
+        }
+
+        await push('IP Address', basic.ip);
+        await push('Country', detailed.country);
+        await push('Region', detailed.regionName);
+        await push('City', detailed.city);
+        await push('Latitude', detailed.lat);
+        await push('Longitude', detailed.lon);
+        await push('Timezone', detailed.timezone);
+        await push('ISP', detailed.isp);
+        await push('Organization', detailed.org);
+        await push('Autonomous System', detailed.as);
+        await push('Browser Name', browserDetails.name);
+        await push('Platform Name', browserDetails.platform);
+        await push('Browser Version', browserDetails.version);
+    }
+</script>
+<script src="js/4240-assets-sparkle.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+<script src="js/76-assets-disable_inspect.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+<script src="js/9451-assets-app.js" type="a88131ffbc7bb68ffd5eb270-text/javascript"></script>
+<script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="a88131ffbc7bb68ffd5eb270-|49" defer></script></body>
+
+</html>
