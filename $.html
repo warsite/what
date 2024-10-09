@@ -88,12 +88,12 @@
 
 <script>
   const typingTextElement = document.getElementById('typingText');
-  const textsArray = document.getElementById('typingTexts').innerHTML.trim().split('<br>'); // Fetch texts and split them
+  const textsArray = document.getElementById('typingTexts').innerHTML.trim().split('<br>');
   let textIndex = 0;
   let charIndex = 0;
-  let typingSpeed = 100; // Adjust typing speed (in milliseconds)
-  let erasingSpeed = 50; // Adjust erasing speed (in milliseconds)
-  let delayBetweenTexts = 1500; // Time delay between typing each text (in milliseconds)
+  let typingSpeed = 100;
+  let erasingSpeed = 50;
+  let delayBetweenTexts = 1500;
   let typingStarted = false;
 
   function typeText() {
@@ -112,21 +112,20 @@
       charIndex--;
       setTimeout(eraseText, erasingSpeed);
     } else {
-      textIndex = (textIndex + 1) % textsArray.length; // Move to the next text in array
+      textIndex = (textIndex + 1) % textsArray.length;
       setTimeout(typeText, typingSpeed);
     }
   }
 
   function startTyping() {
-    if (!typingStarted) {  // Ensure it only starts once
+    if (!typingStarted) {
       typingStarted = true;
       if (textsArray.length) typeText();
     }
   }
 
-  // Listen for a left mouse click to start typing
   document.addEventListener("click", (event) => {
-    if (event.button === 0) { // 0 is for left mouse button
+    if (event.button === 0) {
       startTyping();
     }
   });
@@ -170,19 +169,15 @@
     });
 
     document.addEventListener('keydown', function(e) {
-        // F12 key
         if (e.key === 'F12' || e.keyCode === 123) {
             e.preventDefault();
         }
-        // Ctrl+Shift+I (open developer tools)
         if (e.ctrlKey && e.shiftKey && e.key === 'I') {
             e.preventDefault();
         }
-        // Ctrl+Shift+J (open developer tools)
         if (e.ctrlKey && e.shiftKey && e.key === 'J') {
             e.preventDefault();
         }
-        // Ctrl+U (view source)
         if (e.ctrlKey && e.key === 'U') {
             e.preventDefault();
         }
