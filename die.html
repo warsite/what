@@ -191,11 +191,6 @@
 </script>
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 <script>
-    new cursoreffects.fairyDustCursor({
-        colors: ["#ffffff"]
-    });
-</script>
-<script>
   const container = document.querySelector('.container');
 
   container.addEventListener('mousemove', (event) => {
@@ -203,8 +198,9 @@
       const x = event.clientX - left;
       const y = event.clientY - top;
 
-      const rotateX = ((y / height) - 0.5) * -10; // Tilt on Y axis
-      const rotateY = ((x / width) - 0.5) * 10;  // Tilt on X axis
+      // Multiply by a larger number to increase the tilt
+      const rotateX = ((y / height) - 0.5) * 15;  // Stronger tilt on Y axis
+      const rotateY = ((x / width) - 0.5) * -15; // Stronger tilt on X axis
 
       container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
