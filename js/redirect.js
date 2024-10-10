@@ -15,6 +15,6 @@ window.onload = function() {
     // If the path doesn't match any allowed page, redirect to a different page
     if (!isPageAllowed(path)) {
         // Redirect to the custom page (e.g., 404.html or any other page)
-        window.location.href = 'index.html'; // Change this to your desired redirect page
+        window.location.href = 'unclaimed.html'; // Change this to your desired redirect page
     }
 };
