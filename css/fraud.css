@@ -217,6 +217,9 @@ body {
 .container .profileLayout .profileBadges .profileBadge.fraud:hover::before {
     content: 'Fraud';
 }
+.container .profileLayout .profileBadges .profileBadge.ae:hover::before {
+    content: 'ae';
+}
 .container .profileLayout .profileBio {
     font-weight: 570;
     font-size: 17px; /* Reduced font size */
