@@ -104,6 +104,74 @@
                   </svg>
                   </div>
 </div>
+<h2 id="typingText" style="color:#fff" class="profileBio"></h2>
+<i>
+  <div id="typingTexts" style="display:none">
+    steppin over everything I was trippin on
+    <br>
+  </div>
+</i>
+
+<style>
+  /* Blinking Cursor */
+  @keyframes blinkCursor {
+    50% { border-right-color: transparent; }
+  }
+
+  #typingText {
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Blinking cursor effect */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 0.75s step-end infinite;
+  }
+</style>
+
+<script>
+  const typingTextElement = document.getElementById('typingText');
+  const textsArray = document.getElementById('typingTexts').innerHTML.trim().split('<br>'); // Fetch texts and split them
+  let textIndex = 0;
+  let charIndex = 0;
+  let typingSpeed = 100; // Adjust typing speed (in milliseconds)
+  let erasingSpeed = 50; // Adjust erasing speed (in milliseconds)
+  let delayBetweenTexts = 1500; // Time delay between typing each text (in milliseconds)
+  let typingStarted = false;
+
+  function typeText() {
+    if (charIndex < textsArray[textIndex].length) {
+      typingTextElement.innerHTML += textsArray[textIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeText, typingSpeed);
+    } else {
+      setTimeout(eraseText, delayBetweenTexts);
+    }
+  }
+
+  function eraseText() {
+    if (charIndex > 0) {
+      typingTextElement.innerHTML = textsArray[textIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseText, erasingSpeed);
+    } else {
+      textIndex = (textIndex + 1) % textsArray.length; // Move to the next text in array
+      setTimeout(typeText, typingSpeed);
+    }
+  }
+
+  function startTyping() {
+    if (!typingStarted) {  // Ensure it only starts once
+      typingStarted = true;
+      if (textsArray.length) typeText();
+    }
+  }
+
+  // Listen for a left mouse click to start typing
+  document.addEventListener("click", (event) => {
+    if (event.button === 0) { // 0 is for left mouse button
+      startTyping();
+    }
+  });
+</script>
 <div class="presenceWrapper">
 <div class="presenceContainer">
 <div class="discordInfos">
