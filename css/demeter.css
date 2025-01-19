@@ -4,7 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-10/cur965.cur) 16 16, auto !important;
         -webkit-user-select: none; /* Chrome, Safari */
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* IE 10+ */
@@ -17,16 +16,19 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     border-radius: 15px;
     min-height: 15rem;
-    padding: 35px 15px;
+    padding: 25px 15px; /* Reduced padding */
     width: 100%;
-    max-width: 650px; /* 650 */
+    max-width: 650px;
     text-align: center;
-    outline: 3px solid rgba(255, 255, 255, 0.089);
-    box-shadow: 0px 0px 100px 50px #00000060;
+    background-color: transparent; /* Makes the container invisible */
+    outline: none; /* Removes the outline */
+    box-shadow: none; /* Removes the box-shadow */
+    transition: box-shadow 0.3s ease-in-out;
 }
+
 
 .full-screen-video {
     position: fixed;
@@ -56,12 +58,11 @@ body {
 }
 
 .container .avatar {
-    margin-top: 50px;
+    margin-top: 20px; /* Reduced margin-top */
     z-index: 1;
     border-radius: 50%;
-    height: 115px;
-    width: 115px;
-    outline: 3px solid rgba(255, 255, 255, 0.301);
+    height: 115px; /* Reduced size */
+    width: 115px; /* Reduced size */
 }
 
 .container .profileLayout {
@@ -71,11 +72,22 @@ body {
     justify-content: center;
     max-width: 27rem;
     text-align: center;
+    margin-top: -10px; /* Reduced space between avatar and username */
+}
+
+.gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures content appears above the GIF */
 }
 
 /* Tooltip */
 .profileUsername:hover::after {
-    content: 'UID: 10';
+    content: 'UID: 36';
     position: absolute;
     top: -25px; /* Adjust this value to position the tooltip above */
     left: 50%; /* Aligns the tooltip's left side to the center of the element */
@@ -91,8 +103,8 @@ body {
 
 .container .profileLayout .profileUsername {
     font-weight: 600;
-    font-size: 36.5px;
-    width: fit-content;
+    font-size: 36.5px; /* Slightly reduced font size */
+    margin-bottom: 5px; /* Reduced bottom margin */
 }
 
 .full-screen-gif {
@@ -105,18 +117,17 @@ body {
     z-index: -1;
   }
 
-.container .profileLayout .profileBadges {
-    content: attr(data-tooltip);
-    margin-bottom: 17px;
-    margin-top: 8px;
+  .container .profileLayout .profileBadges {
+    margin-bottom: 10px; /* Reduced gap between badges and username */
+    margin-top: 5px; /* Reduced gap between badges and username */
     align-items: center;
     background-color: rgba(255, 255, 255, 0.08);
     border: 2px solid rgba(255, 255, 255, 0.04);
     border-radius: 25px;
     display: flex;
-    gap: 5.5px;
+    gap: 4px; /* Reduced gap between badges */
     justify-content: center;
-    padding: 6px 10px;
+    padding: 4px 8px; /* Reduced padding */
 }
 
 .container .profileLayout .profileBadges .profileBadge {
@@ -194,9 +205,24 @@ body {
 .container .profileLayout .profileBadges .profileBadge.money:hover::before {
     content: '$ money $';
 }
+.container .profileLayout .profileBadges .profileBadge.queen:hover::before {
+    content: 'Queen';
+}
+.container .profileLayout .profileBadges .profileBadge.ext:hover::before {
+    content: '692 is daddy';
+}
+.container .profileLayout .profileBadges .profileBadge.saint:hover::before {
+    content: 'Saint';
+}
+.container .profileLayout .profileBadges .profileBadge.fraud:hover::before {
+    content: 'Fraud';
+}
+.container .profileLayout .profileBadges .profileBadge.ae:hover::before {
+    content: 'anti';
+}
 .container .profileLayout .profileBio {
     font-weight: 570;
-    font-size: 17px;
+    font-size: 17px; /* Reduced font size */
     margin-top: 5px;
     color: white;
     height: 23px;
@@ -205,9 +231,10 @@ body {
 .container .presenceWrapper {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem; /* Reduced gap between Discord RPC and social icons */
     max-width: 28rem;
     width: 100%;
+    margin-top: -15px; /* Reduced gap between bio and Discord RPC */
 }
 
 .container .presenceContainer {
@@ -225,12 +252,29 @@ body {
     max-width: fit-content;
     width: 100%;
 }
-
+.avatar-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .avatar {
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* or specific width */
+    height: 100%; /* or specific height */
+    pointer-events: none;  /* Makes sure the overlay doesn't block interactions with the avatar */
+  }
+  
 .container .presenceWrapper .discordInfos {
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Reduced gap between Discord info components */
     justify-content: left;
-    padding: 10px;
+    padding: 8px 10px; /* Reduced padding */
     position: relative;
     white-space: nowrap;
 }
@@ -286,7 +330,7 @@ body {
 }
 
 .container .presenceWrapper .discordInfos .discordUser h3 {
-    font-size: 13.5px;
+    font-size: 12px; /* Reduced font size */
     color: rgba(255, 255, 255, 0.7);
     margin-right: 2px;
     font-style: italic;
@@ -431,8 +475,8 @@ body {
 .container .linkedAccounts {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 0.8rem; /* Reduced gap */
+    margin-top: 1.5rem; /* Reduced gap */
     filter: drop-shadow(0 0 1.2px #ffffff) !important;
 }
 
@@ -452,9 +496,9 @@ body {
     opacity: 0;
     color: white;
     position: absolute;
-    font-size: 15px;
+    font-size: 14px; /* Reduced font size */
     font-weight: 600;
-    top: -30px;
+    top: -25px; /* Reduced space above tooltip */
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1rem;
@@ -560,7 +604,7 @@ body {
 }
 
 .username::after {
-    content: "UID 10";
+    content: "UID 36";
     position: absolute;
     left: 7%;
     transform: translateX(-50%);
@@ -625,7 +669,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 1s ease-in-out;
     backdrop-filter: blur(20px);
 }
@@ -655,9 +699,18 @@ body {
 }
 
 .bio-container.visible {
-    opacity: 1;
+    opacity: 0;
 }
 
+.video-background {
+    position: absolute; /* Position it behind everything */
+    top: 0;
+    left: 0;
+    width: 100%; /* Stretch the video to fill the entire width */
+    height: 100%; /* Stretch the video to fill the entire height */
+    object-fit: cover; /* Ensures the video covers the screen while maintaining its aspect ratio */
+    z-index: -1; /* Place the video behind other content */
+  }
 .view-counter {
     position: absolute;
     bottom: 10px; /* Adjusted position from bottom */
