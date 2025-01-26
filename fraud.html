@@ -38,7 +38,6 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: -1; /* Make sure the background stays behind the content */
-            filter: blur(5px) brightness(0.5); /* Apply blur and darken the background */
           }
           body, html {
             margin: 0;
@@ -75,54 +74,57 @@
         <div class="enter-text"> CLICK TO ENTER </div>
         </div> 
         <video class="video-background" autoplay loop muted>
-          <source src="media/videoplayback_2.mp4" type="video/mp4">
+          <source src="media/rot.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-
+        
         <div class="container">
         <div class="fixed-tips">
         </div>
-        <img class="avatar" src="images/teka.png">
-        <div class="profileLayout">
-          <h1 class="profileUsername" style="color:#fff;text-shadow:0 0 20px #fff;position:relative;display:inline-block;background-image:url('images/sparkle_white.gif');background-size:100% auto;background-repeat:no-repeat;background-position:center;" onmouseover="showUIDTooltip()" onmouseout="hideUIDTooltip()">eth</h1>
-          <span id="uid-tooltip" style="display:none;position:absolute;background:rgba(0,0,0,0.7);color:#fff;padding:5px;border-radius:3px;top:-30px;left:0;">UID: 1</span>
+            <img class="avatar" src="images/fraudsnew.png" alt="Discord Avatar">
+                  <div class="profileLayout">
+          <h1 class="profileUsername" style="color:#fff;text-shadow:0 0 20px #fff;position:relative;background-image:url('images/sparkle.gif');background-size:200%;background-repeat:no-repeat;" onmouseover="showUIDTooltip()" onmouseout="hideUIDTooltip()">fraud</h1>
+          <span id="uid-tooltip" style="display:none;position:absolute;background:rgba(0,0,0,0.7);color:#fff;padding:5px;border-radius:3px;top:-30px;left:0;">UID: 29</span>
         </h1>
         <div class="profileBadges">
             <div style="display:flex" class="profileBadge earlysupporter">
             <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
             <path d="m12 8.5l2.116 5.088l5.492.44l-4.184 3.585l1.278 5.36L12 20.1l-4.702 2.872l1.278-5.36l-4.184-3.584l5.492-.44L12 8.5ZM8 2v9H6V2h2Zm10 0v9h-2V2h2Zm-5 0v5h-2V2h2Z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
             </svg>
-            </div>
+            </div>      
               <div style="display:flex" class="profileBadge member">
                 <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 8v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2V20z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
                 </svg>
                 </div>
-                <div style="display:flex" class="profileBadge imagehost">
-                  <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
-                    <path fill="white" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
-                  </svg>
-                </div>
-                <div style="display:flex" class="profileBadge verified">
-                  <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
-                      <path fill="white" d="m23 12l-2.44-2.79l.34-3.69l-3.61-.82l-1.89-3.2L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5l.34 3.7L1 12l2.44 2.79l-.34 3.7l3.61.82L8.6 22.5l3.4-1.47l3.4 1.46l1.89-3.19l3.61-.82l-.34-3.69zM9.38 16.01L7 13.61a.996.996 0 0 1 0-1.41l.07-.07c.39-.39 1.03-.39 1.42 0l1.61 1.62l5.15-5.16c.39-.39 1.03-.39 1.42 0l.07.07c.39.39.39 1.02 0 1.41l-5.92 5.94c-.41.39-1.04.39-1.44 0" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
-                  </svg>
-                  </div>
-                  <div style="display:flex" class="profileBadge staff">
-                    <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
-                    <path d="m16.06 13.09l5.63 5.59l-3.32 3.28l-5.59-5.59v-.92l2.36-2.36h.92m.91-2.53L16 9.6l-4.79 4.8v1.97L5.58 22L2.3 18.68l5.59-5.59h1.97l.78-.78L6.8 8.46H5.5L2.69 5.62L5.31 3l2.8 2.8v1.31L12 10.95l2.66-2.66l-.96-1.01L15 5.97h-2.66l-.65-.65L15 2l.66.66v2.66L16.97 4l3.28 3.28c1.09 1.1 1.09 2.89 0 3.98l-1.97-2.01l-1.31 1.31Z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
+                <div style="display:flex" class="profileBadge saint">
+                    <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m22 7l-.5-.5c-1.57 1.5-3.03 2.9-4.57 3.68c-1.43.73-2.49.73-3.93.82c.09-1.44.09-2.5.82-3.93c.78-1.54 2.18-3 3.68-4.57L17 2c-1.68 1.23-3.36 1.83-5 1.83S8.68 3.23 7 2l-.5.5C8 4.07 9.4 5.53 10.18 7.07c.73 1.43.73 2.49.82 3.93c-1.44-.09-2.5-.09-3.93-.82C5.53 9.4 4.06 8 2.5 6.5L2 7c1.23 1.68 1.83 3.36 1.83 5s-.6 3.32-1.83 5l.5.5c1.57-1.5 3.03-2.9 4.57-3.68c1.43-.73 2.49-.73 3.93-.82c-.09 1.44-.09 2.5-.82 3.93c-.78 1.54-2.18 3-3.68 4.57l.5.5c1.68-1.23 3.36-1.83 5-1.83s3.32.6 5 1.83l.5-.5c-1.5-1.57-2.9-3.03-3.68-4.57c-.73-1.43-.73-2.49-.82-3.93c1.44.09 2.5.09 3.93.82c1.54.78 3 2.18 4.57 3.68l.5-.5c-1.23-1.68-1.83-3.36-1.83-5s.6-3.32 1.83-5" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
                     </svg>
                     </div>
-                    <div style="display:flex" class="profileBadge crown">
-                        <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
-                        <path d="M21.609 13.5616L21.8382 11.1263C22.0182 9.2137 22.1082 8.25739 21.781 7.86207C21.604 7.64823 21.3633 7.5172 21.106 7.4946C20.6303 7.45282 20.0329 8.1329 18.8381 9.49307C18.2202 10.1965 17.9113 10.5482 17.5666 10.6027C17.3757 10.6328 17.1811 10.6018 17.0047 10.5131C16.6865 10.3529 16.4743 9.91812 16.0499 9.04851L13.8131 4.46485C13.0112 2.82162 12.6102 2 12 2C11.3898 2 10.9888 2.82162 10.1869 4.46486L7.95007 9.04852C7.5257 9.91812 7.31351 10.3529 6.99526 10.5131C6.81892 10.6018 6.62434 10.6328 6.43337 10.6027C6.08872 10.5482 5.77977 10.1965 5.16187 9.49307C3.96708 8.1329 3.36968 7.45282 2.89399 7.4946C2.63666 7.5172 2.39598 7.64823 2.21899 7.86207C1.8918 8.25739 1.9818 9.2137 2.16181 11.1263L2.391 13.5616C2.76865 17.5742 2.95748 19.5805 4.14009 20.7902C5.32271 22 7.09517 22 10.6401 22H13.3599C16.9048 22 18.6773 22 19.8599 20.7902C21.0425 19.5805 21.2313 17.5742 21.609 13.5616Z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
+                    <div style="display:flex" class="profileBadge fraud">
+                        <img class="profileBadge" src="images/fraudbadge.png" alt="Profile Badge" width="29.3em" height="29.3em" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff">
+                      </div>
+                    <div style="display:flex" class="profileBadge ae">
+                        <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff">
+                          <path fill="currentColor" d="m267.788 262.954l-42.198 42.199a237.1 237.1 0 0 0 180.038 36.641l-11.394-57.128a178.75 178.75 0 0 1-126.446-21.712m-115.621 212.76l6.012-1.251a21.794 21.794 0 0 0 16.88-25.808l-9.564-45.742a14.53 14.53 0 0 1 3.947-13.241l38.505-38.505a17.525 17.525 0 0 0 0-24.784l-15.752-15.752l71.944-71.944l-45.76-45.76l-32.275 32.274a10.223 10.223 0 0 0-14.457 14.457l5.61 5.61L77.15 345.373l.01 26.088l30.672 29.938c15.682-5.829 15.516 2.581 19.305 20.687l9.023 43.135a13.54 13.54 0 0 0 16.023 10.493zm-2.853-106.467a10.186 10.186 0 0 1 0-14.405l20.198-20.198a10.186 10.186 0 0 1 14.404 0l7.246 7.246a10.186 10.186 0 0 1 0 14.405l-20.224 20.224a10.186 10.186 0 0 1-14.404 0l-7.238-7.237zm96.342-176.696a10.6 10.6 0 0 1-1.12-1.348a12.03 12.03 0 0 1 1.776-15.393l82.656-82.656c4.804-4.804 12.295-5.102 16.74-.656l24.74 24.74c4.236 4.235 4.192 11.297-.096 16.146l-77.57 87.704c-4.28 4.84-11.228 5.732-15.945 2.363a10.6 10.6 0 0 1-1.348-1.12l-29.798-29.798zM419.096 36l15.753 15.752l-16.794 11.088l-37.053 37.053l-10.055-10.055l37.062-37.062zm-63 24.267a5.41 5.41 0 0 1 0-7.648l3.431-3.43a5.41 5.41 0 0 1 7.649 0l12.251 12.25l-11.079 11.08z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
                         </svg>
                         </div>
+                      <div style="display:flex" class="profileBadge verified">
+                        <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em" >
+                            <path fill="white" d="m23 12l-2.44-2.79l.34-3.69l-3.61-.82l-1.89-3.2L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5l.34 3.7L1 12l2.44 2.79l-.34 3.7l3.61.82L8.6 22.5l3.4-1.47l3.4 1.46l1.89-3.19l3.61-.82l-.34-3.69zM9.38 16.01L7 13.61a.996.996 0 0 1 0-1.41l.07-.07c.39-.39 1.03-.39 1.42 0l1.61 1.62l5.15-5.16c.39-.39 1.03-.39 1.42 0l.07.07c.39.39.39 1.02 0 1.41l-5.92 5.94c-.41.39-1.04.39-1.44 0" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
+                        </svg>
+                        </div>
+                        <div style="display:flex" class="profileBadge imagehost">
+                            <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                              <path fill="white" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="m8.587 8.236l2.598-5.232a.911.911 0 0 1 1.63 0l2.598 5.232l5.808.844a.902.902 0 0 1 .503 1.542l-4.202 4.07l.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.953l.992-5.75l-4.202-4.07a.902.902 0 0 1 .503-1.54z" style="filter:drop-shadow(0 0 1.5px #ffffff)!important" fill="#ffffff"></path>
+                            </svg>
+                          </div>
 </div>
 <h2 id="typingText" style="color:#fff" class="profileBio"></h2>
 <i>
   <div id="typingTexts" style="display:none">
-    make money, scam scammers.
+    Trust is fragile, fraud shatters it beyond repair
     <br>
   </div>
 </i>
@@ -191,13 +193,14 @@
 <div class="presenceContainer">
 <div class="discordInfos">
 <div class="discordAvatar">
-<img class="avatarImage" src="images/teka.png" alt="Discord Avatar">
+<img class="avatarImage" src="images/frauddiscord.png" alt="Discord Avatar">
 </div>
 <div class="discordActivity">
 <div class="discordUser">
 <div class="discordUserDiv">
-<span>@ethtalks</span>
+<span>fraud (@goreliveleak)</span>
 </div>
+<h3>.gg/souless</h3>
 </div>
 <div class="discordActivityImage"></div>
 </div>
@@ -206,14 +209,24 @@
 </div>
 </div>
 <div style="display:none" id="curEffClr">#ffffff</div>
-<audio id="enter-sound" src="media/videoplayback_2.mp4" loop></audio>
+<audio id="enter-sound" src="media/netsped.mp3" loop></audio>
 <div class="linkedAccounts">
-  <a data-type="Doxbin" class="linkedAccountsRedirect" target="_blank" href="https://doxbin.net/user/russiafederation/pastes" style="color:#ffffff;text-shadow:1px 1px 5px #ffffff">
-    <svg xmlns="http://www.w3.org/2000/svg" width="3.1em" height="3.1em" viewBox="0 0 48 48" style="color:#ffffff;text-shadow:1px 1px 5px #ffffff">
-      <path fill="currentColor" d="M30.718 32.5c-.471 2.437-1.135 4.603-1.931 6.395c-.82 1.844-1.732 3.183-2.618 4.026C25.296 43.75 24.567 44 24 44s-1.296-.248-2.169-1.08c-.886-.842-1.798-2.18-2.617-4.025c-.797-1.792-1.46-3.958-1.932-6.395zm2.544 0c-.825 4.547-2.293 8.35-4.149 10.84c5.762-1.519 10.506-5.545 12.996-10.84zm9.822-2.5h-9.443c.234-1.91.359-3.922.359-6c0-1.897-.104-3.74-.3-5.5h9.534A20 20 0 0 1 44 24c0 2.09-.32 4.106-.916 6m-11.963 0H16.879a47 47 0 0 1-.379-6a47 47 0 0 1 .317-5.5h14.366A47 47 0 0 1 31.5 24a47 47 0 0 1-.38 6m-16.76 0a49 49 0 0 1-.36-6c0-1.897.104-3.74.3-5.5H4.767A20 20 0 0 0 4 24c0 2.09.32 4.106.916 6zm-8.47 2.5c2.49 5.295 7.235 9.321 12.997 10.84c-1.856-2.49-3.324-6.293-4.149-10.84zM28.788 9.105c.85 1.914 1.55 4.254 2.025 6.895H17.188c.476-2.64 1.175-4.981 2.026-6.895c.82-1.844 1.731-3.183 2.617-4.026C22.704 4.25 23.433 4 24 4s1.296.248 2.169 1.08c.886.842 1.798 2.18 2.617 4.025M33.349 16h8.987c-2.421-5.541-7.281-9.774-13.223-11.34c1.924 2.58 3.43 6.572 4.236 11.34M5.664 16h8.987c.806-4.768 2.312-8.76 4.236-11.34C12.945 6.226 8.085 10.459 5.664 16" style="color:#ffffff;text-shadow:1px 1px 5px #ffffff"></path>
+  <a data-type="Discord" class="linkedAccountsRedirect" target="_blank" href="https://discord.com/invite/souless">
+    <svg xmlns="http://www.w3.org/2000/svg" width="3.1em" height="3.1em" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.1.1 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.1 16.1 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12"></path>
     </svg>
     </a>
-
+    <a data-type="Onlyfans" class="linkedAccountsRedirect" target="_blank" href="https://onlyfans.com/fraud">
+      <svg xmlns="http://www.w3.org/2000/svg" width="3.1em" height="3.1em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M24 4.003h-4.015c-3.45 0-5.3.197-6.748 1.957a7.996 7.996 0 1 0 2.103 9.211c3.182-.231 5.39-2.134 6.085-5.173c0 0-2.399.585-4.43 0c4.018-.777 6.333-3.037 7.005-5.995M5.61 11.999A2.391 2.391 0 0 1 9.28 9.97a2.966 2.966 0 0 1 2.998-2.528h.008c-.92 1.778-1.407 3.352-1.998 5.263A2.392 2.392 0 0 1 5.61 12Zm2.386-7.996a7.996 7.996 0 1 0 7.996 7.996a7.996 7.996 0 0 0-7.996-7.996m0 10.394A2.399 2.399 0 1 1 10.395 12a2.396 2.396 0 0 1-2.399 2.398Z"></path>
+      </svg>
+      </a>
+  <a data-type="Guns.lol" class="linkedAccountsRedirect" target="_blank" href="https://guns.lol/vmpyre">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2.9em" height="2.9em" viewBox="0 0 36 36">
+      <path fill="currentColor" d="M10.05 18a20.5 20.5 0 0 0 .62 4.93h6.48v-9.48h-6.57a20.6 20.6 0 0 0-.53 4.55" className="clr-i-solid clr-i-solid-path-1"></path><path fill="currentColor" d="M18.85 13.45v9.48h6.48A20.5 20.5 0 0 0 26 18a20.6 20.6 0 0 0-.52-4.55Z" className="clr-i-solid clr-i-solid-path-2"></path><path fill="currentColor" d="M18 2a16 16 0 1 0 16 16A16 16 0 0 0 18 2m12.22 22.71H26.6a21.8 21.8 0 0 1-3 6a14 14 0 0 1-3 .92a20.2 20.2 0 0 0 4.18-6.94h-5.92v7.15h-1.69v-7.13h-5.95a20.2 20.2 0 0 0 4.18 6.95a14 14 0 0 1-2.94-.9a21.8 21.8 0 0 1-3-6.05H5.78a14 14 0 0 1-.83-1.81h4a22.2 22.2 0 0 1-.58-4.9a22 22 0 0 1 .48-4.55H4.76a14 14 0 0 1 .76-1.81h3.81A22.3 22.3 0 0 1 12.61 5a14 14 0 0 1 2.87-.84a20.1 20.1 0 0 0-4.4 7.45h6.09V4h1.69v7.64h6.09a20.1 20.1 0 0 0-4.39-7.44a14 14 0 0 1 2.87.8a22.3 22.3 0 0 1 3.27 6.59h3.77a14 14 0 0 1 .76 1.81h-4.06a22 22 0 0 1 .49 4.6a22.2 22.2 0 0 1-.57 4.93h4a14 14 0 0 1-.87 1.78" className="clr-i-solid clr-i-solid-path-3"></path><path fill="none" d="M0 0h36v36H0z"></path>
+    </svg>
+    </a>
+      
 <script>function enterSite(){document.querySelector(".enter-container").classList.add("fade-out"),document.querySelector("#enter-sound").play(),setTimeout((()=>{document.querySelector(".enter-container").style.display="none"}),500)}window.addEventListener("load",(()=>{document.querySelector(".fade-in").classList.add("fade-in")}))</script>
             <script>
     document.addEventListener('contextmenu', function(e) {
@@ -244,6 +257,25 @@
     new cursoreffects.fairyDustCursor({
         colors: ["#ffffff"]
     });
+</script>
+<script>
+  const container = document.querySelector('.container');
+
+  container.addEventListener('mousemove', (event) => {
+      const { width, height, left, top } = container.getBoundingClientRect();
+      const x = event.clientX - left;
+      const y = event.clientY - top;
+
+      // Multiply by a larger number to increase the tilt
+      const rotateX = ((y / height) - 0.5) * 15;  // Stronger tilt on Y axis
+      const rotateY = ((x / width) - 0.5) * -15; // Stronger tilt on X axis
+
+      container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  container.addEventListener('mouseleave', () => {
+      container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)'; // Reset to original position
+  });
 </script>
 <script disable-devtool-auto=""src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
