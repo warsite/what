@@ -235,25 +235,6 @@
         colors: ["#ffffff"]
     });
 </script>
-<script>
-  const container = document.querySelector('.container');
-
-  container.addEventListener('mousemove', (event) => {
-      const { width, height, left, top } = container.getBoundingClientRect();
-      const x = event.clientX - left;
-      const y = event.clientY - top;
-
-      // Multiply by a larger number to increase the tilt
-      const rotateX = ((y / height) - 0.5) * 15;  // Stronger tilt on Y axis
-      const rotateY = ((x / width) - 0.5) * -15; // Stronger tilt on X axis
-
-      container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  container.addEventListener('mouseleave', () => {
-      container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)'; // Reset to original position
-  });
-</script>
 <script disable-devtool-auto=""src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
 <script src="https://cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="4bd4645f4892bfc91ed2554f-|49" defer></script>
