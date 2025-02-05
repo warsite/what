@@ -181,9 +181,9 @@ no regrets in life, just lessons learned.
 <div class="discordActivity">
 <div class="discordUser">
 <div class="discordUserDiv">
-<span>natan (@silentdeficittt)</span>
+<span>@silentdeficittt</span>
 </div>
-<h3>zeemyson</h3>
+<h3></h3>
 </div>
 <div class="discordActivityImage"></div>
 </div>
@@ -192,7 +192,7 @@ no regrets in life, just lessons learned.
 </div>
 </div>
 <div style="display:none" id="curEffClr">#ffffff</div>
-<audio id="enter-sound" src="media/nemz.mp3" loop></audio>
+<audio id="enter-sound" src="media/pozer.mp3" loop></audio>
 <div class="linkedAccounts">
 
 <script>function enterSite(){document.querySelector(".enter-container").classList.add("fade-out"),document.querySelector("#enter-sound").play(),setTimeout((()=>{document.querySelector(".enter-container").style.display="none"}),500)}window.addEventListener("load",(()=>{document.querySelector(".fade-in").classList.add("fade-in")}))</script>
@@ -225,25 +225,6 @@ no regrets in life, just lessons learned.
     new cursoreffects.fairyDustCursor({
         colors: ["#ffffff"]
     });
-</script>
-<script>
-  const container = document.querySelector('.container');
-
-  container.addEventListener('mousemove', (event) => {
-      const { width, height, left, top } = container.getBoundingClientRect();
-      const x = event.clientX - left;
-      const y = event.clientY - top;
-
-      // Multiply by a larger number to increase the tilt
-      const rotateX = ((y / height) - 0.5) * 15;  // Stronger tilt on Y axis
-      const rotateY = ((x / width) - 0.5) * -15; // Stronger tilt on X axis
-
-      container.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  container.addEventListener('mouseleave', () => {
-      container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)'; // Reset to original position
-  });
 </script>
 <script disable-devtool-auto=""src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
