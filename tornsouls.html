@@ -230,6 +230,50 @@
         }
     });
 </script>
+            <script>
+            const numFlakes = 50,
+                flakes = [];
+            function createSnowflake() {
+                const e = document.createElement("div");
+                e.classList.add("snowflake"),
+                    (e.innerText = "*"),
+                    (e.style.left = Math.random() * window.innerWidth + "px"),
+                    (e.style.fontSize = 10 * Math.random() + 15 + "px"),
+                    (e.style.opacity = Math.random()),
+                    (e.style.top = Math.random() * window.innerHeight + "px"), // Random initial y-position
+                    document.body.appendChild(e);
+                const t = 2 * Math.random() + 1,
+                    a = 5 * Math.random() + 1,
+                    n = Math.random() < 0.5 ? -1 : 1;
+                flakes.push({
+                    element: e,
+                    x: parseFloat(e.style.left),
+                    y: parseFloat(e.style.top), // Initialize with random y-position
+                    speed: t,
+                    sway: a,
+                    swayDirection: n,
+                    swayOffset: Math.random() * Math.PI,
+                });
+            }
+            function moveSnowflakes() {
+                flakes.forEach((e) => {
+                    (e.y += e.speed),
+                        (e.x += Math.sin(e.swayOffset) * e.sway * e.swayDirection),
+                        (e.swayOffset += 0.05),
+                        (e.element.style.top = e.y + "px"),
+                        (e.element.style.left = e.x + "px"),
+                        e.y > window.innerHeight &&
+                        ((e.y = -20),
+                            (e.x = Math.random() * window.innerWidth),
+                            (e.swayOffset = Math.random() * Math.PI));
+                });
+            }
+            function startSnowflakes() {
+                for (let e = 0; e < numFlakes; e++) createSnowflake();
+                setInterval(moveSnowflakes, 20);
+            }
+            window.startSnowflakes = startSnowflakes;
+        </script>
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 <script>
     new cursoreffects.fairyDustCursor({
